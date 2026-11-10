@@ -1,0 +1,29 @@
+{
+  "experiment": "experimento-01-stack-referencia",
+  "mode": "mock (sem modelo real, sem chaves)",
+  "total": 3,
+  "passed": 2,
+  "failed": 1,
+  "results": [
+    {
+      "case": "c1-dado-nao-publico",
+      "passed": true,
+      "missing": [],
+      "error": null
+    },
+    {
+      "case": "c2-ferramenta-aprovada",
+      "passed": true,
+      "missing": [],
+      "error": null
+    },
+    {
+      "case": "c3-falha-intencional",
+      "passed": false,
+      "missing": [
+        "RIPD"
+      ],
+      "error": null
+    }
+  ]
+}
