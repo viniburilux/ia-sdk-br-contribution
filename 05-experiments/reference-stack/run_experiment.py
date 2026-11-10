@@ -13,6 +13,7 @@ Saidas:
 """
 import datetime
 import json
+import os
 import time
 import urllib.request
 
@@ -41,6 +42,7 @@ CASES = [
 
 
 def chat(prompt: str) -> dict:
+    key = os.environ["LITELLM_MASTER_KEY"]
     body = json.dumps({
         "model": MODEL,
         "messages": [{"role": "user", "content": prompt}],
@@ -48,7 +50,7 @@ def chat(prompt: str) -> dict:
     req = urllib.request.Request(
         f"{BASE}/chat/completions", data=body,
         headers={"Content-Type": "application/json",
-                 "Authorization": "Bearer sk-local-experimento-01"},
+                 "Authorization": f"Bearer {key}"},
         method="POST")
     started = time.monotonic()
     with urllib.request.urlopen(req, timeout=30) as resp:
