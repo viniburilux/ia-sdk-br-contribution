@@ -1,6 +1,6 @@
 # IA SDK BR - Contribuição: investigação, mapa, decisões, artefatos e experimentos
 
-**Documento de trabalho privado, 9 nov 2026. Proposta de contribuição para discussão no grupo IA SDK BR - não é padrão oficial.**
+**Documento de trabalho, 9 nov 2026. Proposta de contribuição para discussão no grupo IA SDK BR - não é padrão oficial.**
 
 ## Conclusão principal
 
