@@ -14,10 +14,12 @@ Primeira tentativa de ligar três camadas do mapa na prática: **gateway** (Lite
 
 ```bash
 pip install 'litellm[proxy]'
-export LITELLM_MASTER_KEY=sk-local-experimento-01
+export LITELLM_MASTER_KEY="sk-$(python3 -c 'import secrets; print(secrets.token_urlsafe(32))')"
 litellm --config proxy-config.yaml --port 4100 &
 python3 run_experiment.py   # escreve out/results.json e out/trace.jsonl
 ```
+
+A chave é gerada localmente para cada execução e não deve ser publicada.
 
 ## Arquivos
 
