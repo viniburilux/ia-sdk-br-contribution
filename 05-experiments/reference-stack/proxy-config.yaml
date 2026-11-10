@@ -1,0 +1,9 @@
+# Config minima do gateway LiteLLM para o experimento 01.
+# Sem chaves de API: o modelo "assistente-politica-ia" usa mock_response,
+# ou seja, testa a FIAÇÃO (gateway -> requisicao -> avaliacao -> trilha),
+# nao a qualidade de nenhum modelo real.
+model_list:
+  - model_name: assistente-politica-ia
+    litellm_params:
+      model: openai/modelo-simulado
+      mock_response: "Esta e uma resposta simulada (mock). Numa execucao real, o assistente responderia conforme a politica de uso de IA da organizacao, ancorada na LGPD (Lei no 13.709/2018): dados nao publicos so entram em ferramentas aprovadas, e a politica nao substitui parecer juridico."
